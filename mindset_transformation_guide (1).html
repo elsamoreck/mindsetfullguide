@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Being a Nice Guy - The Mindset Transformation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000000;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #7f1d1d 100%);
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(220, 38, 38, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: headerPulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes headerPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header-badge {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+        
+        .header .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .header-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+            margin: 30px auto 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .intro-section {
+            background: linear-gradient(135deg, #1a1a1a, #000000);
+            padding: 50px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            border: 2px solid rgba(220, 38, 38, 0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        
+        .intro-section h2 {
+            color: #dc2626;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        
+        .intro-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #e5e5e5;
+            margin-bottom: 20px;
+        }
+        
+        .secret-card {
+            background: linear-gradient(145deg, #1a1a1a, #000000);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            border-left: 6px solid #dc2626;
+            border: 2px solid rgba(220, 38, 38, 0.2);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        .secret-number {
+            color: #dc2626;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .secret-title {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .secret-content h3 {
+            color: #dc2626;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .secret-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e5e5e5;
+            margin-bottom: 15px;
+        }
+        
+        .quote-box {
+            background: linear-gradient(145deg, #dc2626, #991b1b);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-style: italic;
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(220, 38, 38, 0.05));
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #dc2626;
+            margin: 20px 0;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+        
+        .action-box {
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px solid rgba(220, 38, 38, 0.4);
+        }
+        
+        .action-box h4 {
+            color: #dc2626;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(220, 38, 38, 0.1));
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #dc2626;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #dc2626;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .comparison-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .comparison-card {
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid rgba(220, 38, 38, 0.3);
+        }
+        
+        .nice-guy-card {
+            background: linear-gradient(135deg, rgba(153, 27, 27, 0.2), rgba(127, 29, 29, 0.1));
+        }
+        
+        .confident-card {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.3), rgba(220, 38, 38, 0.15));
+        }
+        
+        .comparison-card h5 {
+            color: #dc2626;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .footer h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        
+        .footer p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .secret-card {
+                padding: 30px 20px;
+            }
+            
+            .intro-section {
+                padding: 30px 25px;
+            }
+            
+            .comparison-box {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-badge">Premium Guide</div>
+            <h1>Stop Being a Nice Guy</h1>
+            <p class="subtitle">The Mindset Transformation That Changes Everything</p>
+            <div class="header-divider"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="intro-section">
+            <h2>Your Problem Isn't Your Tactics</h2>
+            <p>You've read the articles. Watched the videos. Learned the openers, the conversation techniques, the texting strategies. Maybe you've even had some success.</p>
+            
+            <p>But something still feels off. You get her number, then panic and overcompensate. You land a date, then spend the whole time trying to prove you're worthy. You win, but it feels like you're still losing.</p>
+            
+            <p>Here's the brutal truth: your problem isn't your tactics. It's your mindset.</p>
+            
+            <p>You walk into every interaction already defeated—convinced you're not good enough, that she's doing you a favor by talking to you, that you need to earn her approval. And when you believe that, she believes it too.</p>
+            
+            <p>This guide isn't about learning new tricks. It's about fixing the foundation that makes all tactics work: your self-belief.</p>
+        </div>
+        
+        <div class="quote-box">
+            "Mindset is 80% of the game. Tactics are meaningless without the right foundation."
+        </div>
+        
+        <!-- PROBLEM #1 -->
+        <div class="secret-card">
+            <div class="secret-number">THE NICE GUY PROBLEM #1</div>
+            <div class="secret-title">You're Already Defeated Before You Start</div>
+            <div class="secret-content">
+                <h3>The Internal Narrative</h3>
+                <p>Before you even approach her, you've already lost. In your head, the script is written: "I'm not good enough for her. She's out of my league. She probably won't be interested."</p>
+                
+                <p>This isn't confidence. This is pre-emptive surrender.</p>
+                
+                <h3>How This Shows Up</h3>
+                <div class="comparison-box">
+                    <div class="comparison-card nice-guy-card">
+                        <h5>❌ NICE GUY MINDSET</h5>
+                        <p>"I hope she likes me"</p>
+                        <p>"Please give me a chance"</p>
+                        <p>"I'm lucky if she talks to me"</p>
+                        <p>"I need to prove I'm worthy"</p>
+                    </div>
+                    <div class="comparison-card confident-card">
+                        <h5>✓ CONFIDENT MINDSET</h5>
+                        <p>"Let's see if we're a good match"</p>
+                        <p>"I'm bringing value to this interaction"</p>
+                        <p>"We're both evaluating each other"</p>
+                        <p>"I already know I'm worthy"</p>
+                    </div>
+                </div>
+                
+                <h3>Why This Kills Attraction</h3>
+                <p>When you walk in thinking "I'm not good enough," it seeps into everything—your body language, your tone, your energy. She can feel it.</p>
+                
+                <p>You're communicating inferiority before you even open your mouth. And if you don't believe you're valuable, why should she?</p>
+                
+                <div class="action-box">
+                    <h4>THE SHIFT YOU NEED</h4>
+                    <p>• Stop asking "Will she like me?" Start asking "Do I like her?"</p>
+                    <p>• Approach as an equal, not a supplicant</p>
+                    <p>• Assume you're a catch—because you are</p>
+                    <p>• Enter interactions to discover compatibility, not beg for approval</p>
+                    <p>• Believe you're the prize she'd be lucky to know</p>
+                </div>
+                
+                <h3>The Reality Check</h3>
+                <p>You're not lucky to talk to her. She's not doing you a favor. This is two people seeing if there's mutual interest. The power dynamic is equal—or it should be.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Core Belief:</strong> I am enough exactly as I am. I'm not trying to earn her approval—I'm seeing if she earns mine.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PROBLEM #2 -->
+        <div class="secret-card">
+            <div class="secret-number">THE NICE GUY PROBLEM #2</div>
+            <div class="secret-title">Even When You Win, You Lose</div>
+            <div class="secret-content">
+                <h3>The Pattern</h3>
+                <p>You finally get her number. Success, right? Wrong.</p>
+                
+                <p>Now you panic. You overcompensate. You text too much. You're too available. You agree with everything she says. You sacrifice your plans to accommodate hers. You become a doormat.</p>
+                
+                <p>Why? Because deep down, you still don't believe you deserve her attention. So you work overtime to keep it.</p>
+                
+                <h3>The Overcompensation Spiral</h3>
+                <div class="action-box">
+                    <h4>WHAT THIS LOOKS LIKE</h4>
+                    <p>• Get her number → immediately text a paragraph</p>
+                    <p>• She suggests a date → you drop everything to accommodate</p>
+                    <p>• She expresses an opinion → you agree even when you don't</p>
+                    <p>• She's busy → you sit around waiting for her to text back</p>
+                    <p>• She shows slight interest → you smother her with attention</p>
+                </div>
+                
+                <h3>Why This Backfires</h3>
+                <p>Overcompensation signals low value. It says: "I know I'm not good enough, so I need to make up for it by being excessively available and agreeable."</p>
+                
+                <p>This kills attraction instantly. She's not looking for a servant. She's looking for a partner who values himself.</p>
+                
+                <div class="comparison-box">
+                    <div class="comparison-card nice-guy-card">
+                        <h5>❌ NICE GUY BEHAVIOR</h5>
+                        <p>Cancels plans with friends to see her</p>
+                        <p>Always available, no matter what</p>
+                        <p>Never disagrees or has his own opinions</p>
+                        <p>Constantly seeks her approval</p>
+                    </div>
+                    <div class="comparison-card confident-card">
+                        <h5>✓ CONFIDENT BEHAVIOR</h5>
+                        <p>Has a full life she's a part of</p>
+                        <p>Available, but not desperate</p>
+                        <p>Has his own opinions and expresses them</p>
+                        <p>Validates himself internally</p>
+                    </div>
+                </div>
+                
+                <h3>The Right Approach</h3>
+                <p>When you get her number, treat it as the beginning of getting to know each other—not a miracle you need to desperately cling to.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO AVOID OVERCOMPENSATING</h4>
+                    <p>• Keep living your life—don't make her the center of it</p>
+                    <p>• Match her investment level—don't exceed it</p>
+                    <p>• Maintain your plans, interests, and social life</p>
+                    <p>• Be willing to disagree respectfully</p>
+                    <p>• Don't sacrifice your boundaries to please her</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Core Belief:</strong> Getting her number is great, but it's not a prize I need to guard desperately. I'm still living my life—she's welcome to be part of it.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PROBLEM #3 -->
+        <div class="secret-card">
+            <div class="secret-number">THE NICE GUY PROBLEM #3</div>
+            <div class="secret-title">You Don't Believe You're Worthy</div>
+            <div class="secret-content">
+                <h3>The Root Issue</h3>
+                <p>Every nice guy behavior stems from the same core belief: "I'm not worthy of her attention, affection, or love as I am."</p>
+                
+                <p>So you try to earn it. You bend over backwards. You sacrifice your needs. You become whatever you think she wants you to be.</p>
+                
+                <p>But here's the truth: if YOU don't believe you're worthy, SHE won't believe it either.</p>
+                
+                <h3>How She Reads Unworthiness</h3>
+                <p>Women are incredibly perceptive. They can sense when a man doesn't value himself. And when they sense it, attraction dies.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>What your unworthiness communicates:</strong></p>
+                    <p>• "I don't think I'm good enough for you"</p>
+                    <p>• "I'll do anything to keep you because I know I'm not a prize"</p>
+                    <p>• "You should settle for me because no one better will commit to you"</p>
+                    <p>• "I don't trust that you'd choose me unless I beg"</p>
+                </div>
+                
+                <h3>The Self-Fulfilling Prophecy</h3>
+                <p>When you don't believe you're worthy, you create the exact outcome you fear. Your lack of self-worth becomes the reason she leaves.</p>
+                
+                <p>It's not that you weren't good enough. It's that you didn't BELIEVE you were good enough—and she picked up on it.</p>
+                
+                <div class="action-box">
+                    <h4>BUILDING WORTHINESS FROM WITHIN</h4>
+                    <p>• List 10 qualities that make you valuable as a partner</p>
+                    <p>• Identify what you bring to a relationship beyond money</p>
+                    <p>• Recognize your strengths instead of fixating on weaknesses</p>
+                    <p>• Work on becoming someone YOU respect and admire</p>
+                    <p>• Stop seeking external validation—validate yourself</p>
+                </div>
+                
+                <h3>The Worthiness Exercise</h3>
+                <p>Right now, write down 10 reasons a woman would be LUCKY to date you. Not things you can buy her. Not what you'll do for her. Who you ARE.</p>
+                
+                <p>Can you do it? If you're struggling, THAT'S your real problem. Not your conversation skills. Not your looks. Your lack of self-belief.</p>
+                
+                <div class="warning-box">
+                    <h4>⚠️ THE HARD TRUTH</h4>
+                    <p>If you can't list 10 reasons you're a catch, you're not ready for a relationship. You're looking for someone to fill a void that only you can fill. Work on yourself first.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quote-box">
+            "You can't list 10 reasons she'd be lucky to have you? There's your real problem."
+        </div>
+        
+        <!-- PROBLEM #4 -->
+        <div class="secret-card">
+            <div class="secret-number">THE NICE GUY PROBLEM #4</div>
+            <div class="secret-title">Tactics Can't Fix Broken Self-Belief</div>
+            <div class="secret-content">
+                <h3>The Seduction Industry Lie</h3>
+                <p>You've been sold a lie: that the right pickup line, the perfect text, the magic technique will make her want you.</p>
+                
+                <p>It won't. Because tactics without mindset are like putting a fresh coat of paint on a crumbling foundation. It looks good for a moment, then everything collapses.</p>
+                
+                <h3>Why Tactics Alone Fail</h3>
+                <p>Say you learn the perfect opener. You approach confidently. She's interested. Then what?</p>
+                
+                <p>Your insecurity kicks in. You revert to nice guy behavior. You start seeking approval. You overcompensate. The attraction dies.</p>
+                
+                <p>The tactic got you in the door. Your mindset kicked you back out.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>The Truth:</strong> All the tactics in the world won't save you if you fundamentally don't believe you're good enough. Your mindset will always override your tactics.</p>
+                </div>
+                
+                <h3>Foundation First, Tactics Second</h3>
+                <p>This is why mindset is 80% of the game. Fix your foundation first. Build genuine self-belief. Then tactics become tools that amplify what's already there.</p>
+                
+                <div class="comparison-box">
+                    <div class="comparison-card nice-guy-card">
+                        <h5>❌ TACTICS WITHOUT MINDSET</h5>
+                        <p>Learns perfect opener</p>
+                        <p>Approaches confidently</p>
+                        <p>Gets number</p>
+                        <p>Immediately reverts to insecurity</p>
+                        <p>Overcompensates and loses her</p>
+                    </div>
+                    <div class="comparison-card confident-card">
+                        <h5>✓ MINDSET + TACTICS</h5>
+                        <p>Knows his worth</p>
+                        <p>Uses opener naturally</p>
+                        <p>Gets number</p>
+                        <p>Stays confident and grounded</p>
+                        <p>Builds genuine connection</p>
+                    </div>
+                </div>
+                
+                <h3>The Work Required</h3>
+                <p>Building the right mindset isn't easy. It requires honest self-assessment, challenging limiting beliefs, and doing the internal work that most men avoid.</p>
+                
+                <p>But this is the ONLY way to create lasting change. Tactics are shortcuts. Mindset is the foundation.</p>
+                
+                <div class="action-box">
+                    <h4>THE FOUNDATION-FIRST APPROACH</h4>
+                    <p><strong>Step 1:</strong> Build self-worth independent of women</p>
+                    <p><strong>Step 2:</strong> Develop genuine confidence in who you are</p>
+                    <p><strong>Step 3:</strong> Enter interactions as an equal, not inferior</p>
+                    <p><strong>Step 4:</strong> Now learn tactics—they'll actually work</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- THE SOLUTION -->
+        <div class="secret-card">
+            <div class="secret-number">THE TRANSFORMATION</div>
+            <div class="secret-title">How to Sharpen Your Mindset and Become Magnetic</div>
+            <div class="secret-content">
+                <h3>The 7 Pillars of Confident Mindset</h3>
+                
+                <h3>Pillar 1: Self-Worth Independent of External Validation</h3>
+                <p>Your value doesn't come from whether she likes you. It comes from who you are and what you stand for.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO BUILD IT</h4>
+                    <p>• Define your values—what do you stand for?</p>
+                    <p>• Set personal goals unrelated to dating</p>
+                    <p>• Achieve things that make YOU proud</p>
+                    <p>• Stop measuring your worth by female attention</p>
+                    <p>• Validate yourself through your actions and integrity</p>
+                </div>
+                
+                <h3>Pillar 2: Abundance Mentality</h3>
+                <p>There are millions of women in the world. She's not your only option. When you internalize this, desperation disappears.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO BUILD IT</h4>
+                    <p>• Talk to more women—see how many options exist</p>
+                    <p>• Don't fixate on one person before you even know her</p>
+                    <p>• Remind yourself: if not her, someone else</p>
+                    <p>• Build a life so full that one woman isn't your everything</p>
+                </div>
+                
+                <h3>Pillar 3: Outcome Independence</h3>
+                <p>You're not attached to whether she likes you. You're curious to see if there's mutual compatibility. That's it.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO BUILD IT</h4>
+                    <p>• Approach to discover, not to convince</p>
+                    <p>• Be okay with rejection—it's just incompatibility</p>
+                    <p>• Don't need every interaction to "work out"</p>
+                    <p>• Focus on the experience, not the result</p>
+                </div>
+                
+                <h3>Pillar 4: High Standards</h3>
+                <p>Stop accepting anyone who gives you attention. Have standards. Be selective. This alone makes you more attractive.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO BUILD IT</h4>
+                    <p>• Define what you actually want in a partner</p>
+                    <p>• Be willing to walk away if standards aren't met</p>
+                    <p>• Don't settle out of fear of being alone</p>
+                    <p>• Vet women just as they vet you</p>
+                </div>
+                
+                <h3>Pillar 5: Unapologetic Authenticity</h3>
+                <p>Be yourself—flaws and all. The right person will appreciate you. The wrong person wouldn't work out anyway.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO BUILD IT</h4>
+                    <p>• Stop pretending to be someone you're not</p>
+                    <p>• Share your real opinions, not what you think she wants to hear</p>
+                    <p>• Be vulnerable when appropriate</p>
+                    <p>• Accept that not everyone will like you—and that's fine</p>
+                </div>
+                
+                <h3>Pillar 6: Self-Respect Through Boundaries</h3>
+                <p>You have non-negotiables. You're not bending yourself into a pretzel to keep her around.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO BUILD IT</h4>
+                    <p>• Know your boundaries and communicate them</p>
+                    <p>• Don't tolerate disrespect or poor treatment</p>
+                    <p>• Be willing to walk away if boundaries are violated</p>
+                    <p>• Your time, energy, and self-respect are non-negotiable</p>
+                </div>
+                
+                <h3>Pillar 7: Continuous Self-Improvement</h3>
+                <p>You're always working on becoming better. Not for her—for you. This creates genuine confidence that radiates.</p>
+                
+                <div class="action-box">
+                    <h4>HOW TO BUILD IT</h4>
+                    <p>• Work on your career, body, skills, and mind</p>
+                    <p>• Read, learn, grow constantly</p>
+                    <p>• Pursue mastery in areas that matter to you</p>
+                    <p>• Become someone you're genuinely proud to be</p>
+                </div>
+                
+                <h3>The Integration</h3>
+                <p>These seven pillars work together. You don't need to master all of them overnight. Start with one. Build it. Then move to the next.</p>
+                
+                <p>Over time, these become who you are. Not techniques you perform—but your actual identity.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>The Result:</strong> When these pillars are solid, you become magnetic. Not because you're performing confidence, but because you genuinely ARE confident. Women feel the difference.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- THE 90-DAY PLAN -->
+        <div class="secret-card">
+            <div class="secret-number">THE 90-DAY MINDSET SHIFT</div>
+            <div class="secret-title">Your Transformation Roadmap</div>
+            <div class="secret-content">
+                <h3>Month 1: Building Self-Worth</h3>
+                <div class="action-box">
+                    <h4>FOCUS AREAS</h4>
+                    <p><strong>Week 1:</strong> Write down 10 reasons you're valuable (revisit and add weekly)</p>
+                    <p><strong>Week 2:</strong> Set 3 personal goals unrelated to dating and take first action</p>
+                    <p><strong>Week 3:</strong> Practice self-validation—acknowledge your wins daily</p>
+                    <p><strong>Week 4:</strong> Identify limiting beliefs about yourself and challenge them</p>
+                </div>
+                
+                <h3>Month 2: Developing Abundance</h3>
+                <div class="action-box">
+                    <h4>FOCUS AREAS</h4>
+                    <p><strong>Week 5:</strong> Talk to 20 new people (men and women—just practice social skills)</p>
+                    <p><strong>Week 6:</strong> Go on dates with 3 different women (or approach 10 if single)</p>
+                    <p><strong>Week 7:</strong> Practice outcome independence—approach without needing results</p>
+                    <p><strong>Week 8:</strong> Reflect on how many options exist once you put yourself out there</p>
+                </div>
+                
+                <h3>Month 3: Embodying Confidence</h3>
+                <div class="action-box">
+                    <h4>FOCUS AREAS</h4>
+                    <p><strong>Week 9:</strong> Define your standards—what do you actually want?</p>
+                    <p><strong>Week 10:</strong> Practice authenticity—share real opinions in conversations</p>
+                    <p><strong>Week 11:</strong> Set and enforce a boundary you've been avoiding</p>
+                    <p><strong>Week 12:</strong> Assess progress—do you feel more confident? If not, what needs work?</p>
+                </div>
+                
+                <h3>Daily Practices</h3>
+                <div class="action-box">
+                    <h4>EVERY SINGLE DAY</h4>
+                    <p>• Morning affirmation: "I am enough exactly as I am"</p>
+                    <p>• Work toward one personal goal (gym, skill, career)</p>
+                    <p>• Practice one pillar of confident mindset</p>
+                    <p>• Evening reflection: What did I do today that I'm proud of?</p>
+                </div>
+                
+                <h3>Measuring Progress</h3>
+                <p>You'll know the mindset shift is working when:</p>
+                
+                <div class="highlight-box">
+                    <p>• Rejection doesn't devastate you anymore</p>
+                    <p>• You enter interactions curious, not desperate</p>
+                    <p>• You can list reasons you're valuable without hesitation</p>
+                    <p>• You're willing to walk away if she's not right</p>
+                    <p>• You feel confident in who you are, with or without her</p>
+                    <p>• You've stopped overcompensating</p>
+                    <p>• Women respond to you differently—because you ARE different</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quote-box">
+            "Stop being a nice guy. Start being a man who knows his worth."
+        </div>
+        
+        <div class="footer">
+            <h2>The Transformation Starts Now</h2>
+            <p>Foundation first. Tactics second. Mindset is 80% of the game.</p>
+            <br>
+            <p style="font-size: 1rem; margin-top: 20px; opacity: 0.8;">Build the foundation. The rest will follow.</p>
+        </div>
+    </div>
+</body>
+</html>
